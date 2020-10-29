@@ -23,11 +23,49 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = {}
+  state = {
+    TextInput_4: "",
+    Switch_5: true,
+    CheckBox_6: true,
+    CheckBox_7: true,
+    DateTimePicker_9: new Date("")
+  }
 
   render = () => (
     <View>
       <Text>Sample text content</Text>
+      <Button title="Press me!" onPress={() => alert("Pressed!")} />
+      <TextInput
+        placeholder="Sample text input placeholder"
+        value={this.state.TextInput_4}
+        onChangeText={nextValue => this.setState({ TextInput_4: nextValue })}
+      />
+      <Switch
+        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
+        value={this.state.Switch_5}
+        onValueChange={nextChecked => this.setState({ Switch_5: nextChecked })}
+      />
+      <CheckBox
+        title="Checkbox"
+        checked={this.state.CheckBox_6}
+        onPress={nextChecked => this.setState({ CheckBox_6: nextChecked })}
+      />
+      <CheckBox
+        title="Radio button"
+        checkedIcon="dot-circle-o"
+        uncheckedIcon="circle-o"
+        checked={this.state.CheckBox_7}
+        onPress={nextChecked => this.setState({ CheckBox_7: nextChecked })}
+      />
+      <Icon name="star" />
+      <DateTimePicker
+        showIcon={false}
+        date={this.state.DateTimePicker_9}
+        onDateChange={selectedDate =>
+          this.setState({ DateTimePicker_9: selectedDate })
+        }
+      />
+      <Image />
     </View>
   )
 }
@@ -37,6 +75,17 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 16
   },
+
   View_1: {},
-  Text_2: {}
+  Text_2: {},
+  View_1: {},
+  Text_2: {},
+  Button_3: {},
+  TextInput_4: {},
+  Switch_5: {},
+  CheckBox_6: {},
+  CheckBox_7: {},
+  Icon_8: {},
+  DateTimePicker_9: {},
+  Image_10: {}
 })
