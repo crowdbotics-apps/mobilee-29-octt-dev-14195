@@ -33,14 +33,11 @@ export default class Blank extends React.Component {
   render = () => (
     <View>
       <Switch
-        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
         value={this.state.Switch_2}
         onValueChange={nextChecked => this.setState({ Switch_2: nextChecked })}
       />
       <CheckBox
         title="Radio button"
-        checkedIcon="dot-circle-o"
-        uncheckedIcon="circle-o"
         checked={this.state.CheckBox_3}
         onPress={nextChecked => this.setState({ CheckBox_3: nextChecked })}
       />
@@ -49,8 +46,15 @@ export default class Blank extends React.Component {
         checked={this.state.CheckBox_4}
         onPress={nextChecked => this.setState({ CheckBox_4: nextChecked })}
       />
-      <Button title="Press me!" onPress={() => alert("Pressed!")} />
-      <Text>Sample text content</Text>
+      <Button
+        title="Press me!"
+        onPress={() => this.props.navigation.navigate("BlankScreen113457")}
+      />
+      <TouchableOpacity
+        onPress={() => this.props.navigation.navigate("BlankScreen113457")}
+      >
+        <Text>Sample text content</Text>
+      </TouchableOpacity>
       <TextInput
         placeholder="Sample text input placeholder"
         value={this.state.TextInput_7}
@@ -66,6 +70,15 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 16
   },
+
+  View_1: {},
+  Switch_2: {},
+  CheckBox_3: {},
+  CheckBox_4: {},
+  Button_5: {},
+  Text_6: {},
+  TextInput_7: {},
+  Image_8: {},
   View_1: {},
   Switch_2: {},
   CheckBox_3: {},
