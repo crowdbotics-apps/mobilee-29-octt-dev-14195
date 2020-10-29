@@ -38,7 +38,10 @@ export default class Blank extends React.Component {
       >
         <Text>Sample text content</Text>
       </TouchableOpacity>
-      <Button title="Press me!" onPress={() => alert("Pressed!")} />
+      <Button
+        title="Press me!"
+        onPress={() => this.props.navigation.navigate("BlankScreen113424")}
+      />
       <TextInput
         placeholder="Sample text input placeholder"
         value={this.state.TextInput_4}
@@ -58,14 +61,22 @@ export default class Blank extends React.Component {
         checked={this.state.CheckBox_7}
         onPress={nextChecked => this.setState({ CheckBox_7: nextChecked })}
       />
-      <Icon name="star" />
+      <TouchableOpacity
+        onPress={() => this.props.navigation.navigate("BlankScreen113424")}
+      >
+        <Icon name="star" />
+      </TouchableOpacity>
       <DateTimePicker
         date={this.state.DateTimePicker_9}
         onDateChange={selectedDate =>
           this.setState({ DateTimePicker_9: selectedDate })
         }
       />
-      <Image />
+      <TouchableOpacity
+        onPress={() => this.props.navigation.navigate("BlankScreen113424")}
+      >
+        <Image />
+      </TouchableOpacity>
     </View>
   )
 }
@@ -78,6 +89,16 @@ const styles = StyleSheet.create({
 
   View_1: {},
   Text_2: {},
+  View_1: {},
+  Text_2: {},
+  Button_3: {},
+  TextInput_4: {},
+  Switch_5: {},
+  CheckBox_6: {},
+  CheckBox_7: {},
+  Icon_8: {},
+  DateTimePicker_9: {},
+  Image_10: {},
   View_1: {},
   Text_2: {},
   Button_3: {},
