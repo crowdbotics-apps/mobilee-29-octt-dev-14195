@@ -28,7 +28,6 @@ export default class Blank extends React.Component {
   render = () => (
     <View>
       <Switch
-        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
         value={this.state.Switch_2}
         onValueChange={nextChecked => this.setState({ Switch_2: nextChecked })}
       />
@@ -51,7 +50,11 @@ export default class Blank extends React.Component {
         value={this.state.TextInput_7}
         onChangeText={nextValue => this.setState({ TextInput_7: nextValue })}
       />
-      <Image />
+      <TouchableOpacity
+        onPress={() => this.props.navigation.navigate("BlankScreen113457")}
+      >
+        <Image />
+      </TouchableOpacity>
     </View>
   )
 }
@@ -73,6 +76,13 @@ const styles = StyleSheet.create({
   View_1: {},
   Switch_2: {},
   CheckBox_3: {},
+  CheckBox_4: {},
+  Button_5: {},
+  Text_6: {},
+  TextInput_7: {},
+  Image_8: {},
+  View_1: {},
+  Switch_2: {},
   CheckBox_4: {},
   Button_5: {},
   Text_6: {},
