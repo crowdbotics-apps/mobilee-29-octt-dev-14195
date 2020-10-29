@@ -23,23 +23,14 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = {
-    Switch_2: true,
-    CheckBox_3: true,
-    CheckBox_4: true,
-    TextInput_7: ""
-  }
+  state = { Switch_2: true, CheckBox_4: true, TextInput_7: "" }
 
   render = () => (
     <View>
       <Switch
+        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
         value={this.state.Switch_2}
         onValueChange={nextChecked => this.setState({ Switch_2: nextChecked })}
-      />
-      <CheckBox
-        title="Radio button"
-        checked={this.state.CheckBox_3}
-        onPress={nextChecked => this.setState({ CheckBox_3: nextChecked })}
       />
       <CheckBox
         title="Checkbox"
@@ -82,6 +73,13 @@ const styles = StyleSheet.create({
   View_1: {},
   Switch_2: {},
   CheckBox_3: {},
+  CheckBox_4: {},
+  Button_5: {},
+  Text_6: {},
+  TextInput_7: {},
+  Image_8: {},
+  View_1: {},
+  Switch_2: {},
   CheckBox_4: {},
   Button_5: {},
   Text_6: {},
