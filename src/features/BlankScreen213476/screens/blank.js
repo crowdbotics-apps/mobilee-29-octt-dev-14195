@@ -53,7 +53,12 @@ export default class Blank extends React.Component {
       <TouchableOpacity
         onPress={() => this.props.navigation.navigate("BlankScreen113457")}
       >
-        <Image />
+        <Image
+          source={{
+            uri:
+              "https://crowdbotics-slack-dev.s3.amazonaws.com/media/project_component_resources/8_4Ql72mr.jpg"
+          }}
+        />
       </TouchableOpacity>
     </View>
   )
@@ -76,6 +81,13 @@ const styles = StyleSheet.create({
   View_1: {},
   Switch_2: {},
   CheckBox_3: {},
+  CheckBox_4: {},
+  Button_5: {},
+  Text_6: {},
+  TextInput_7: {},
+  Image_8: {},
+  View_1: {},
+  Switch_2: {},
   CheckBox_4: {},
   Button_5: {},
   Text_6: {},
