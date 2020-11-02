@@ -23,9 +23,44 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = {}
+  state = {
+    DateTimePicker_5: new Date(""),
+    Switch_9: true,
+    CheckBox_13: true,
+    CheckBox_15: true
+  }
 
-  render = () => <View />
+  render = () => (
+    <View>
+      <Text>Sample text content</Text>
+      <DateTimePicker
+        showIcon={false}
+        date={this.state.DateTimePicker_5}
+        onDateChange={selectedDate =>
+          this.setState({ DateTimePicker_5: selectedDate })
+        }
+      />
+      <Button title="Press me!" onPress={() => alert("Pressed!")} />
+      <Switch
+        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
+        value={this.state.Switch_9}
+        onValueChange={nextChecked => this.setState({ Switch_9: nextChecked })}
+      />
+      <Slider value={50} minimumValue={0} maximumValue={100} />
+      <CheckBox
+        title="Radio button"
+        checkedIcon="dot-circle-o"
+        uncheckedIcon="circle-o"
+        checked={this.state.CheckBox_13}
+        onPress={nextChecked => this.setState({ CheckBox_13: nextChecked })}
+      />
+      <CheckBox
+        title="Checkbox"
+        checked={this.state.CheckBox_15}
+        onPress={nextChecked => this.setState({ CheckBox_15: nextChecked })}
+      />
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({
@@ -87,5 +122,13 @@ const styles = StyleSheet.create({
   Text_2: {},
   Button_4: {},
   Icon_6: {},
-  View_1: {}
+  View_1: {},
+  View_1: {},
+  Text_3: {},
+  DateTimePicker_5: {},
+  Button_7: {},
+  Switch_9: {},
+  Slider_11: {},
+  CheckBox_13: {},
+  CheckBox_15: {}
 })
