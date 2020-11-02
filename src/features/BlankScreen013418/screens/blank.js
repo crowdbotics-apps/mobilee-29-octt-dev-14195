@@ -36,7 +36,6 @@ export default class Blank extends React.Component {
     <View>
       <Text>Sample text content</Text>
       <DateTimePicker
-        showIcon={false}
         date={this.state.DateTimePicker_5}
         onDateChange={selectedDate =>
           this.setState({ DateTimePicker_5: selectedDate })
@@ -44,15 +43,12 @@ export default class Blank extends React.Component {
       />
       <Button title="Press me!" onPress={() => alert("Pressed!")} />
       <Switch
-        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
         value={this.state.Switch_9}
         onValueChange={nextChecked => this.setState({ Switch_9: nextChecked })}
       />
       <Slider value={50} minimumValue={0} maximumValue={100} />
       <CheckBox
         title="Radio button"
-        checkedIcon="dot-circle-o"
-        uncheckedIcon="circle-o"
         checked={this.state.CheckBox_13}
         onPress={nextChecked => this.setState({ CheckBox_13: nextChecked })}
       />
@@ -72,6 +68,7 @@ export default class Blank extends React.Component {
         checked={this.state.CheckBox_31}
         onPress={nextChecked => this.setState({ CheckBox_31: nextChecked })}
       />
+      <Image />
     </View>
   )
 }
@@ -164,5 +161,17 @@ const styles = StyleSheet.create({
   CheckBox_15: {},
   Button_17: {},
   TextInput_19: {},
-  CheckBox_31: {}
+  CheckBox_31: {},
+  View_1: {},
+  Text_3: {},
+  DateTimePicker_5: {},
+  Button_7: {},
+  Switch_9: {},
+  Slider_11: {},
+  CheckBox_13: {},
+  CheckBox_15: {},
+  Button_17: {},
+  TextInput_19: {},
+  CheckBox_31: {},
+  Image_33: {}
 })
