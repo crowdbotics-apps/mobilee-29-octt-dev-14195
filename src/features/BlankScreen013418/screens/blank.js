@@ -32,6 +32,7 @@ export default class Blank extends React.Component {
       >
         <Text>Sample text content</Text>
       </TouchableOpacity>
+      <Button title="Press me!" onPress={() => alert("Pressed!")} />
     </View>
   )
 }
@@ -87,5 +88,8 @@ const styles = StyleSheet.create({
   Button_12: {},
   Text_14: {},
   View_1: {},
-  Text_2: {}
+  Text_2: {},
+  View_1: {},
+  Text_2: {},
+  Button_4: {}
 })
