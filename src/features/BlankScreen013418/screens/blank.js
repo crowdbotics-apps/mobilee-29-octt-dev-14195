@@ -48,6 +48,7 @@ export default class Blank extends React.Component {
         onChangeText={nextValue => this.setState({ TextInput_4: nextValue })}
       />
       <Switch
+        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
         value={this.state.Switch_5}
         onValueChange={nextChecked => this.setState({ Switch_5: nextChecked })}
       />
@@ -58,6 +59,8 @@ export default class Blank extends React.Component {
       />
       <CheckBox
         title="Radio button"
+        checkedIcon="dot-circle-o"
+        uncheckedIcon="circle-o"
         checked={this.state.CheckBox_7}
         onPress={nextChecked => this.setState({ CheckBox_7: nextChecked })}
       />
@@ -67,6 +70,7 @@ export default class Blank extends React.Component {
         <Icon name="star" />
       </TouchableOpacity>
       <DateTimePicker
+        showIcon={false}
         date={this.state.DateTimePicker_9}
         onDateChange={selectedDate =>
           this.setState({ DateTimePicker_9: selectedDate })
@@ -77,6 +81,8 @@ export default class Blank extends React.Component {
       >
         <Image />
       </TouchableOpacity>
+      <Button title="Press me!" onPress={() => alert("Pressed!")} />
+      <Text>Sample text content</Text>
     </View>
   )
 }
@@ -118,5 +124,17 @@ const styles = StyleSheet.create({
   CheckBox_7: {},
   Icon_8: {},
   DateTimePicker_9: {},
-  Image_10: {}
+  Image_10: {},
+  View_1: {},
+  Text_2: {},
+  Button_3: {},
+  TextInput_4: {},
+  Switch_5: {},
+  CheckBox_6: {},
+  CheckBox_7: {},
+  Icon_8: {},
+  DateTimePicker_9: {},
+  Image_10: {},
+  Button_12: {},
+  Text_14: {}
 })
